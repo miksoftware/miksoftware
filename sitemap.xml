@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    
+    <!-- Página Principal -->
+    <url>
+        <loc>https://miksoftwarecol.com/</loc>
+        <lastmod>2026-01-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://miksoftwarecol.com/img/miksoftware.webp</image:loc>
+            <image:title>MikSoftware - Desarrollo de Software en Colombia</image:title>
+            <image:caption>MikSoftware Logo - Empresa de desarrollo de software personalizado</image:caption>
+        </image:image>
+    </url>
+    
+    <!-- Sección Inicio -->
+    <url>
+        <loc>https://miksoftwarecol.com/#inicio</loc>
+        <lastmod>2026-01-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Sección Servicios -->
+    <url>
+        <loc>https://miksoftwarecol.com/#servicios</loc>
+        <lastmod>2026-01-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Sección Clientes -->
+    <url>
+        <loc>https://miksoftwarecol.com/#clientes</loc>
+        <lastmod>2026-01-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Sección Tecnologías -->
+    <url>
+        <loc>https://miksoftwarecol.com/#tecnologias</loc>
+        <lastmod>2026-01-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Sección Factus Partner -->
+    <url>
+        <loc>https://miksoftwarecol.com/#factus</loc>
+        <lastmod>2026-01-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Sección Contacto -->
+    <url>
+        <loc>https://miksoftwarecol.com/#contacto</loc>
+        <lastmod>2026-01-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+</urlset>

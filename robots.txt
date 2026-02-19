@@ -1,0 +1,48 @@
+# robots.txt para MikSoftware
+# https://miksoftwarecol.com/robots.txt
+
+User-agent: *
+Allow: /
+
+# Permitir todos los recursos importantes
+Allow: /img/
+Allow: /style2.css
+Allow: /script2.js
+
+# Bloquear archivos innecesarios para SEO
+Disallow: /cgi-bin/
+Disallow: /*.php$
+Disallow: /admin/
+Disallow: /private/
+
+# Crawl-delay para bots (opcional, para evitar sobrecarga)
+Crawl-delay: 1
+
+# Sitemaps
+Sitemap: https://miksoftware.com/sitemap.xml
+
+# Bots específicos
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /img/
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Bloquear bots maliciosos
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
