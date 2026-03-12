@@ -9,7 +9,7 @@
 // ini_set('display_errors', 1);
 
 // Configuración
-$to_email = 'info@miksoftwarecol.com';
+$to_email = 'softwaremik@gmail.com';
 $site_name = 'MikSoftware';
 $site_domain = 'miksoftwarecol.com';
 

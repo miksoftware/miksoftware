@@ -11,7 +11,6 @@ Allow: /script2.js
 
 # Bloquear archivos innecesarios para SEO
 Disallow: /cgi-bin/
-Disallow: /*.php$
 Disallow: /admin/
 Disallow: /private/
 
@@ -19,7 +18,7 @@ Disallow: /private/
 Crawl-delay: 1
 
 # Sitemaps
-Sitemap: https://miksoftware.com/sitemap.xml
+Sitemap: https://miksoftwarecol.com/sitemap.xml
 
 # Bots específicos
 User-agent: Googlebot
@@ -34,12 +33,12 @@ Allow: /
 User-agent: Slurp
 Allow: /
 
-# Bloquear bots maliciosos
-User-agent: AhrefsBot
-Disallow: /
+# Bots de análisis SEO (permitidos para monitoreo de backlinks)
+# User-agent: AhrefsBot
+# Disallow: /
 
-User-agent: SemrushBot
-Disallow: /
+# User-agent: SemrushBot
+# Disallow: /
 
 User-agent: DotBot
 Disallow: /
