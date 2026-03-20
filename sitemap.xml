@@ -20,4 +20,17 @@
         </image:image>
     </url>
 
+    <!-- MikPOS - Sistema Punto de Venta -->
+    <url>
+        <loc>https://miksoftwarecol.com/mikpos.html</loc>
+        <lastmod>2026-03-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://miksoftwarecol.com/img_mikpos/image3.png</image:loc>
+            <image:title>MikPOS - Dashboard del Sistema Punto de Venta</image:title>
+            <image:caption>Panel de control MikPOS con estadísticas de ventas, reportes y métricas del negocio</image:caption>
+        </image:image>
+    </url>
+
 </urlset>

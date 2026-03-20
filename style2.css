@@ -1812,3 +1812,13 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* Nav MikPOS highlight */
+        .nav-mikpos {
+            color: var(--salmon) !important;
+            font-weight: 600;
+        }
+
+        .nav-mikpos i {
+            margin-right: 0.3rem;
+        }
