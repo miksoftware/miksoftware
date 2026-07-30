@@ -281,13 +281,6 @@ const clientsSwiper = new Swiper('.clientsSwiper', {
     },
 });
 
-// Hide loader
-window.addEventListener('load', () => {
-    setTimeout(() => {
-        document.getElementById('loader').classList.add('hidden');
-    }, 1000);
-});
-
 // Navbar scroll effect
 window.addEventListener('scroll', () => {
     const navbar = document.getElementById('navbar');
@@ -313,80 +306,6 @@ function toggleMobileMenu() {
     const mobileNav = document.getElementById('mobileNav');
     mobileNav.classList.toggle('active');
 }
-
-// Generate particles
-function generateParticles() {
-    const particlesContainer = document.getElementById('particles');
-    const particleCount = window.innerWidth > 768 ? 50 : 25;
-    
-    for (let i = 0; i < particleCount; i++) {
-        const particle = document.createElement('div');
-        particle.className = 'particle';
-        particle.style.width = Math.random() * 10 + 'px';
-        particle.style.height = particle.style.width;
-        particle.style.left = Math.random() * 100 + '%';
-        particle.style.top = Math.random() * 100 + '%';
-        particle.style.animationDelay = Math.random() * 20 + 's';
-        particle.style.animationDuration = 20 + Math.random() * 10 + 's';
-        particlesContainer.appendChild(particle);
-    }
-}
-
-generateParticles();
-
-// Rocket companion movement
-const rocket = document.getElementById('rocketCompanion');
-const sections = document.querySelectorAll('section');
-
-window.addEventListener('scroll', function() {
-    const scrollPosition = window.scrollY;
-    const windowHeight = window.innerHeight;
-    
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.offsetHeight;
-        const sectionId = section.id;
-        
-        if (scrollPosition >= sectionTop - windowHeight/2 && 
-            scrollPosition < sectionTop + sectionHeight - windowHeight/2) {
-            
-            // Remove all position classes
-            rocket.className = 'rocket-companion';
-            
-            // Add appropriate class based on section
-            switch(sectionId) {
-                case 'inicio':
-                    rocket.classList.add('at-inicio');
-                    break;
-                case 'servicios':
-                    rocket.classList.add('at-servicios');
-                    break;
-                case 'clientes':
-                    rocket.classList.add('at-clientes');
-                    break;
-                case 'tecnologias':
-                    rocket.classList.add('at-tecnologias');
-                    break;
-                case 'factus':
-                    rocket.classList.add('at-factus');
-                    break;
-                case 'contacto':
-                    rocket.classList.add('at-contacto');
-                    break;
-            }
-        }
-    });
-    
-    // Check if at footer
-    const footer = document.querySelector('footer');
-    if (footer) {
-        const footerTop = footer.offsetTop;
-        if (scrollPosition >= footerTop - windowHeight/2) {
-            rocket.className = 'rocket-companion';
-            rocket.classList.add('at-footer');
-        }
-    }
-});
 
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -637,3 +556,7 @@ function validateField(field) {
     
     return isValid;
 }
+
+
+// FAQ Accordion Logic
+document.querySelectorAll('.faq-question').forEach(button => { button.addEventListener('click', () => { const faqItem = button.parentElement; const faqAnswer = button.nextElementSibling; const isActive = faqItem.classList.contains('active'); document.querySelectorAll('.faq-item').forEach(item => { item.classList.remove('active'); item.querySelector('.faq-answer').style.maxHeight = null; }); if (!isActive) { faqItem.classList.add('active'); faqAnswer.style.maxHeight = faqAnswer.scrollHeight + 'px'; } }); });

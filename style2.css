@@ -20,23 +20,10 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background: var(--negro);
+            background: transparent;
             color: var(--blanco);
             overflow-x: hidden;
             position: relative;
-        }
-
-        /* Rocket Companion - La Mascota Interactiva */
-        .rocket-companion {
-            position: fixed;
-            width: 40px;
-            height: 80px;
-            z-index: 9999;
-            pointer-events: none;
-            transition: all 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            top: 50%;
-            right: 5%;
-            transform: translateY(-50%);
         }
 
         .rocket-body {
@@ -191,7 +178,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: var(--negro);
+            background: transparent;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -229,7 +216,7 @@
             top: 0;
             width: 100%;
             padding: 1.5rem 5%;
-            background: rgba(15, 15, 15, 0.95);
+            background: rgba(10, 10, 15, 0.3);
             backdrop-filter: blur(20px);
             z-index: 1000;
             transition: all 0.3s ease;
@@ -699,7 +686,7 @@
         /* Services Section - CORREGIDO */
         .services {
             padding: 5rem 5%;
-            background: linear-gradient(180deg, var(--negro) 0%, var(--gris) 100%);
+            background: transparent;
         }
 
         .section-header {
@@ -762,7 +749,7 @@
 
         .service-card:hover {
             transform: translateY(-10px);
-            background: rgba(15, 15, 15, 0.95);
+            background: rgba(10, 10, 15, 0.3);
             border-color: var(--morado);
             box-shadow: 0 20px 40px rgba(139, 92, 246, 0.3),
                         0 0 0 1px rgba(139, 92, 246, 0.5);
@@ -822,7 +809,7 @@
         /* Clients Section - NUEVA */
         .clients {
             padding: 5rem 5%;
-            background: var(--negro);
+            background: transparent;
             position: relative;
             overflow: hidden;
         }
@@ -933,7 +920,7 @@
         /* Tech Stack - MEJORADO CON CARRUSEL */
         .tech-stack {
             padding: 5rem 5%;
-            background: var(--gris);
+            background: transparent;
             position: relative;
             overflow: hidden;
         }
@@ -1012,7 +999,7 @@
         /* Factus Partner Section */
         .factus-partner {
             padding: 5rem 5%;
-            background: linear-gradient(180deg, var(--gris) 0%, var(--negro) 100%);
+            background: transparent;
             position: relative;
             overflow: hidden;
         }
@@ -1152,7 +1139,7 @@
         /* CTA Section - BOTONES CENTRADOS */
         .cta {
             padding: 5rem 5%;
-            background: linear-gradient(135deg, var(--gris) 0%, var(--negro) 100%);
+            background: transparent;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -1204,7 +1191,7 @@
 
         /* Footer */
         footer {
-            background: var(--negro);
+            background: transparent;
             padding: 3rem 5% 2rem;
             border-top: 1px solid rgba(139, 92, 246, 0.2);
         }
@@ -1624,7 +1611,7 @@
         }
 
         .form-group select option {
-            background: var(--gris);
+            background: transparent;
             color: var(--blanco);
         }
 
@@ -1822,3 +1809,230 @@
         .nav-mikpos i {
             margin-right: 0.3rem;
         }
+
+
+
+
+
+
+/* FAQ Section */
+.faq { padding: 5rem 5%; }
+.faq-container { max-width: 800px; margin: 3rem auto 0; display: flex; flex-direction: column; gap: 1rem; }
+.faq-item { background: rgba(26, 26, 26, 0.6); border: 1px solid rgba(139, 92, 246, 0.2); border-radius: 12px; overflow: hidden; transition: all 0.3s ease; }
+        }
+
+        .error-message {
+            display: none;
+            color: var(--salmon);
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+        }
+
+        .form-group.show-error .error-message {
+            display: block;
+        }
+
+        /* WhatsApp Consent Row */
+        .whatsapp-consent-row {
+            width: 100%;
+            margin-bottom: 1.5rem;
+        }
+
+        .consent-label {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            cursor: pointer;
+            padding: 1rem;
+            background: rgba(37, 211, 102, 0.08);
+            border: 1px solid rgba(37, 211, 102, 0.3);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .consent-label:hover {
+            background: rgba(37, 211, 102, 0.15);
+            border-color: #25D366;
+        }
+
+        .consent-label input[type="checkbox"] {
+            display: none;
+        }
+
+        .consent-checkbox {
+            width: 24px;
+            height: 24px;
+            border: 2px solid #25D366;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+            background: transparent;
+        }
+
+        .consent-checkbox i {
+            color: transparent;
+            font-size: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .consent-label input[type="checkbox"]:checked + .consent-checkbox {
+            background: #25D366;
+            border-color: #25D366;
+        }
+
+        .consent-label input[type="checkbox"]:checked + .consent-checkbox i {
+            color: var(--blanco);
+        }
+
+        .consent-text {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+            flex: 1;
+        }
+
+        .consent-label input[type="checkbox"]:checked ~ .consent-text {
+            color: #25D366;
+        }
+
+        .form-group label i {
+            margin-right: 0.5rem;
+        }
+
+        .btn-submit {
+            width: 100%;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .btn-submit:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+
+        .btn-submit.loading .fa-paper-plane {
+            display: none;
+        }
+
+        .btn-submit.loading::after {
+            content: '';
+            width: 20px;
+            height: 20px;
+            border: 2px solid transparent;
+            border-top-color: var(--blanco);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin-left: 0.5rem;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .form-success {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: rgba(139, 92, 246, 0.1);
+            border-radius: 20px;
+            border: 2px solid var(--morado);
+            max-width: 500px;
+            margin: 2rem auto;
+        }
+
+        .form-success i {
+            font-size: 4rem;
+            color: #28ca42;
+            margin-bottom: 1rem;
+        }
+
+        .form-success h3 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.8rem;
+            color: var(--blanco);
+            margin-bottom: 0.5rem;
+        }
+
+        .form-success p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.1rem;
+        }
+
+        .contact-alternatives {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(139, 92, 246, 0.2);
+        }
+
+        .contact-alternatives p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 640px) {
+            .contact-form {
+                padding: 0 1rem;
+            }
+
+            .form-group input,
+            .form-group select,
+            .form-group textarea {
+                padding: 0.875rem;
+            }
+        }
+
+        /* Scroll animations */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease;
+        }
+
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Nav MikPOS highlight */
+        .nav-mikpos {
+            color: var(--salmon) !important;
+            font-weight: 600;
+        }
+
+        .nav-mikpos i {
+            margin-right: 0.3rem;
+        }
+
+
+
+
+
+
+/* FAQ Section */
+.faq { padding: 5rem 5%; }
+.faq-container { max-width: 800px; margin: 3rem auto 0; display: flex; flex-direction: column; gap: 1rem; }
+.faq-item { background: rgba(26, 26, 26, 0.6); border: 1px solid rgba(139, 92, 246, 0.2); border-radius: 12px; overflow: hidden; transition: all 0.3s ease; }
+.faq-question { width: 100%; background: none; border: none; padding: 1.5rem; display: flex; justify-content: space-between; align-items: center; color: var(--blanco); font-size: 1.1rem; font-weight: 600; text-align: left; cursor: pointer; transition: all 0.3s ease; }
+.faq-question:hover { color: var(--salmon); }
+.faq-question i { color: var(--morado); transition: transform 0.3s ease; }
+.faq-item.active .faq-question i { transform: rotate(180deg); }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+.faq-answer p { padding: 0 1.5rem 1.5rem; color: #ccc; line-height: 1.6; }
+
+/* Loader Progress */
+.loader-content { position: absolute; bottom: 10%; width: 100%; text-align: center; }
+.loader-percentage { font-size: 2.5rem; letter-spacing: 2px; font-weight: 700; color: var(--blanco); font-variant-numeric: tabular-nums; text-shadow: 0 0 10px rgba(255,255,255,0.2); }
+.loader-text { font-size: 1rem; color: #aaa; text-transform: uppercase; letter-spacing: 4px; margin-top: 0.5rem; animation: pulse 1.5s infinite; }
+
+@media (max-width: 768px) {
+    .loader-content { bottom: 15%; padding: 0 1rem; }
+    .loader-percentage { font-size: 2rem; letter-spacing: 1px; }
+    .loader-text { font-size: 0.85rem; letter-spacing: 2px; }
+}
+
+
+/* Cinematic Loader Classes */
+.hidden-content { opacity: 0; pointer-events: none; visibility: hidden; transition: opacity 2s ease, visibility 2s ease; }
+.visible-content { opacity: 1; pointer-events: auto; visibility: visible; }
