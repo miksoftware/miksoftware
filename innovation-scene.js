@@ -233,7 +233,7 @@ const clock = new THREE.Clock();
 let isStateLoading = true;
 let isTransitioning = false;
 let loadTime = 0;
-const loadDuration = 5; // 5 segundos
+const loadDuration = 3; // 3 segundos
 
 // Lerp helper
 function lerp(start, end, amt) {
@@ -260,14 +260,21 @@ function animate() {
         
         // Actualizar UI
         const percEl = document.getElementById('loaderPercentage');
-        if(percEl) percEl.innerHTML = Math.floor(progress * 100) + '%';
+        const barEl = document.getElementById('loaderBar');
+        const pct = Math.floor(progress * 100);
+        if(percEl) percEl.innerHTML = pct + '%';
+        if(barEl) barEl.style.width = pct + '%';
         
         if (progress >= 1) {
             isStateLoading = false;
             isTransitioning = true;
-            // Ocultar UI de Carga
+            // Ocultar UI de Carga completamente
             const loaderEl = document.getElementById('loader');
-            if(loaderEl) loaderEl.style.opacity = 0;
+            if(loaderEl) {
+                loaderEl.style.opacity = 0;
+                loaderEl.style.pointerEvents = 'none';
+                setTimeout(() => { loaderEl.style.visibility = 'hidden'; }, 900);
+            }
             
             // Ignición!
             fuelBeam.visible = false;
@@ -281,7 +288,7 @@ function animate() {
                     mainContent.classList.remove('hidden-content');
                     mainContent.classList.add('visible-content');
                 }
-            }, 1000); // 1 segundo después de ignición
+            }, 500); // 500ms después de ignición para entrada más rápida
         }
     } 
     else if (isTransitioning) {

@@ -293,13 +293,17 @@
 <body>
     <!-- Global Three.js Canvas -->
     <canvas id="three-canvas"
-        style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: auto;"></canvas>
+        style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none;"></canvas>
 
-    <!-- Loader Cinemático (Fondo Transparente, se ve el canvas 3D) -->
+    <!-- Loader Cinemático -->
     <div class="loader" id="loader">
         <div class="loader-content">
+            <div class="loader-logo-text">MikSoftware</div>
             <div class="loader-percentage" id="loaderPercentage">0%</div>
-            <p class="loader-text" data-lang="loader-text">Cargando Combustible...</p>
+            <div class="loader-bar-wrap">
+                <div class="loader-bar" id="loaderBar"></div>
+            </div>
+            <p class="loader-text">Cargando Sistemas...</p>
         </div>
     </div>
 
@@ -437,7 +441,7 @@
                     sistemas web adaptados a tus necesidades en Colombia</p>
             </div>
             <div class="services-grid">
-                <a href="desarrollo-web" class="service-card scroll-reveal" data-aos="fade-up" data-aos-delay="100"
+                <a href="#" class="service-card scroll-reveal" data-aos="fade-up" data-aos-delay="100"
                     style="text-decoration:none; display: block;">
                     <div class="service-icon">
                         <i class="fas fa-laptop-code"></i>
@@ -447,78 +451,78 @@
                         Aplicaciones web modernas, responsivas y escalables utilizando las últimas tecnologías y mejores
                         prácticas del mercado.
                     </p>
+                    <a href="#" class="service-card scroll-reveal" data-aos="fade-up" data-aos-delay="200"
+                        style="text-decoration:none; display: block;">
+                        <div class="service-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3 class="service-title" data-lang="service2-title">Landing Pages</h3>
+                        <p class="service-description" data-lang="service2-desc">
+                            Páginas de aterrizaje optimizadas para conversión, con diseños impactantes y rendimiento
+                            excepcional.
+                        </p>
 
-                </a>
-                <a href="landing-pages" class="service-card scroll-reveal" data-aos="fade-up" data-aos-delay="200"
-                    style="text-decoration:none; display: block;">
-                    <div class="service-icon">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3 class="service-title" data-lang="service2-title">Landing Pages</h3>
-                    <p class="service-description" data-lang="service2-desc">
-                        Páginas de aterrizaje optimizadas para conversión, con diseños impactantes y rendimiento
-                        excepcional.
-                    </p>
+                    </a>
+                    <a href="#" class="service-card scroll-reveal" data-aos="fade-up" data-aos-delay="300"
+                        style="text-decoration:none; display: block;">
+                        <div class="service-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3 class="service-title" data-lang="service3-title">Sistemas a Medida</h3>
+                        <p class="service-description" data-lang="service3-desc">
+                            Desarrollo de software personalizado que se adapta perfectamente a los procesos únicos de tu
+                            empresa.
+                        </p>
 
-                </a>
-                <a href="sistemas-medida" class="service-card scroll-reveal" data-aos="fade-up" data-aos-delay="300"
-                    style="text-decoration:none; display: block;">
-                    <div class="service-icon">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <h3 class="service-title" data-lang="service3-title">Sistemas a Medida</h3>
-                    <p class="service-description" data-lang="service3-desc">
-                        Desarrollo de software personalizado que se adapta perfectamente a los procesos únicos de tu
-                        empresa.
-                    </p>
+                    </a>
+                    <a href="#" class="service-card scroll-reveal" data-aos="fade-up" data-aos-delay="400"
+                        style="text-decoration:none; display: block;">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="service-title" data-lang="service4-title">Dashboard Analytics</h3>
+                        <p class="service-description" data-lang="service4-desc">
+                            Paneles de control interactivos para visualizar y analizar datos en tiempo real.
+                        </p>
 
-                </a>
-                <a href="dashboard-analytics" class="service-card scroll-reveal" data-aos="fade-up" data-aos-delay="400"
-                    style="text-decoration:none; display: block;">
-                    <div class="service-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3 class="service-title" data-lang="service4-title">Dashboard Analytics</h3>
-                    <p class="service-description" data-lang="service4-desc">
-                        Paneles de control interactivos para visualizar y analizar datos en tiempo real.
-                    </p>
+                    </a>
+                    <a href="#" class="service-card scroll-reveal" data-aos="fade-up" data-aos-delay="500"
+                        style="text-decoration:none; display: block;">
+                        <div class="service-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h3 class="service-title" data-lang="service5-title">Cloud Solutions</h3>
+                        <p class="service-description" data-lang="service5-desc">
+                            Migración y desarrollo de aplicaciones en la nube para máxima disponibilidad y
+                            escalabilidad.
+                        </p>
 
-                </a>
-                <a href="cloud-solutions" class="service-card scroll-reveal" data-aos="fade-up" data-aos-delay="500"
-                    style="text-decoration:none; display: block;">
-                    <div class="service-icon">
-                        <i class="fas fa-cloud"></i>
-                    </div>
-                    <h3 class="service-title" data-lang="service5-title">Cloud Solutions</h3>
-                    <p class="service-description" data-lang="service5-desc">
-                        Migración y desarrollo de aplicaciones en la nube para máxima disponibilidad y escalabilidad.
-                    </p>
+                    </a>
+                    <a href="#" class="service-card scroll-reveal" data-aos="fade-up" data-aos-delay="600"
+                        style="text-decoration:none; display: block;">
+                        <div class="service-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3 class="service-title" data-lang="service6-title">API Development</h3>
+                        <p class="service-description" data-lang="service6-desc">
+                            Diseño y desarrollo de APIs RESTful robustas para integración de sistemas y servicios.
+                        </p>
 
-                </a>
-                <a href="api-development" class="service-card scroll-reveal" data-aos="fade-up" data-aos-delay="600"
-                    style="text-decoration:none; display: block;">
-                    <div class="service-icon">
-                        <i class="fas fa-cogs"></i>
-                    </div>
-                    <h3 class="service-title" data-lang="service6-title">API Development</h3>
-                    <p class="service-description" data-lang="service6-desc">
-                        Diseño y desarrollo de APIs RESTful robustas para integración de sistemas y servicios.
-                    </p>
+                    </a>
+                    <a href="mikpos" class="service-card scroll-reveal mikpos-card" data-aos="fade-up"
+                        data-aos-delay="700" style="text-decoration:none;">
+                        <div class="service-icon">
+                            <i class="fas fa-cash-register"></i>
+                        </div>
+                        <h3 class="service-title" data-lang="service-mikpos-title">MikPOS - Punto de Venta</h3>
+                        <p class="service-description" data-lang="service-mikpos-desc">Gestión integral de tu negocio.
+                            MikPOS está
+                            integrado de forma nativa a través de API con Factus, garantizando la emisión de facturación
+                            electrónica 100% válida y automatizada ante la DIAN en Colombia. Reportes, nómina,
+                            multisucursal
+                            y facturación electrónica. Desde $300.000 COP/año.</p>
 
-                </a>
-                <a href="mikpos" class="service-card scroll-reveal mikpos-card" data-aos="fade-up" data-aos-delay="700"
-                    style="text-decoration:none;">
-                    <div class="service-icon">
-                        <i class="fas fa-cash-register"></i>
-                    </div>
-                    <h3 class="service-title" data-lang="service-mikpos-title">MikPOS - Punto de Venta</h3>
-                    <p class="service-description" data-lang="service-mikpos-desc">Gestión integral de tu negocio.
-                        MikPOS está
-                        integrado de forma nativa a través de API con Factus, garantizando la emisión de facturación
-                        electrónica 100% válida y automatizada ante la DIAN en Colombia. Reportes, nómina, multisucursal
-                        y facturación electrónica. Desde $300.000 COP/año.</p>
-
-                </a>
+                    </a>
             </div>
         </section>
 
@@ -902,7 +906,9 @@
         </div>
     </footer>
 
-    <!-- WhatsApp Float Button -->
+    </div><!-- /#main-content -->
+
+    <!-- WhatsApp Float Button (siempre visible) -->
     <a href="https://wa.me/573027038461" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
         aria-label="Contactar por WhatsApp">
         <svg viewBox="0 0 24 24" width="32" height="32" fill="white">
@@ -920,7 +926,6 @@
     <!-- Custom Scripts -->
     <script src="script2.js?v=2.7"></script>
     <script type="module" src="innovation-scene.js?v=1.0"></script>
-    </div>
 </body>
 
 </html>
